@@ -183,7 +183,7 @@ Under the following terms:
 - Leonardo Lopiano¹²
 - Carlo Alberto Artusi¹³
 
-¹Politecnico di Torino, ²Independent, ³University of Padova, ⁴University of Verona, ⁵University of Limerick, ⁶Mälardalen University, ⁷Sapienza University of Rome, ⁸University of Turin, ⁹University of Verona, ¹⁰EDALab s.r.l., ¹¹Politecnico di Torino, ¹²University of Turin, ¹³University of Turin
+¹Politecnico di Torino, ²University of Stavanger, ³University of Padova, ⁴University of Verona, ⁵University of Limerick, ⁶Mälardalen University, ⁷Sapienza University of Rome, ⁸University of Turin, ⁹University of Verona, ¹⁰EDALab s.r.l., ¹¹Politecnico di Torino, ¹²University of Turin, ¹³University of Turin
 
 ## 📧 Contact
 
