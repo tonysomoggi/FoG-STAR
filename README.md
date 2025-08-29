@@ -183,7 +183,7 @@ Under the following terms:
 - Leonardo Lopiano¹²
 - Carlo Alberto Artusi¹³
 
-¹Politecnico di Torino, ²University of Stavanger, ³University of Padova, ⁴University of Verona, ⁵University of Limerick, ⁶Mälardalen University, ⁷Sapienza University of Rome, ⁸University of Turin, ⁹University of Verona, ¹⁰EDALab s.r.l., ¹¹Politecnico di Torino, ¹²University of Turin, ¹³University of Turin
+¹Politecnico di Torino Dipartimento di Automatica e Informatica, ²University of Stavanger, ³Ospedale Santa Chiara, ⁴University of Verona, ⁵University of Limerick Faculty of Education and Health Sciences, ⁶School of Innovation Design and Engineering, Malardalen University, Vaster as, Sweden, ⁷Department of Neuroscience, Mental Health and Sensory Organs, Sapienza University of Rome, ⁸Department of Neuroscience, University of Turin, ⁹Department of Neurosciences, Biomedicine and Movement Sciences, University of Verona, ¹⁰EDALab s.r.l., ¹¹Department of Control and Computer Engineering, Politecnico di Torino, ¹²University of Turin, ¹³Department of Neuroscience, University of Turin
 
 ## 📧 Contact
 
